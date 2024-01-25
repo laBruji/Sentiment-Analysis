@@ -1,1 +1,2 @@
-# Sentiment-Analysis
+# Sentiment Analysis
+This repository contains scripts for sentiment analysis on movie reviews using various techniques for text vectorization, including the Bag-of-Words (BoW) model and the Term Frequency-Inverse Document Frequency (TF-IDF) model. The analysis is performed using machine learning algorithms such as Logistic Regression and Support Vector Machines (SVMs).

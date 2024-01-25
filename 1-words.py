@@ -1,14 +1,11 @@
-import sys
 import pandas as pd
-import re,string,unicodedata
+import re
 from bs4 import BeautifulSoup
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.tokenize.toktok import ToktokTokenizer
-from nltk.stem import LancasterStemmer, WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
-
 
 # Basic Functions
 def remove_tags(text):
@@ -51,7 +48,7 @@ def remove_stopwords(text, is_lowercase = False):
 
 
 # import data from csv file
-movie_df = pd.read_csv('dataset.csv') # movie reviews df
+movie_df = pd.read_csv('../IMDB Dataset.csv') # movie reviews df
 
 movie_df['review'] = movie_df['review'].apply(remove_all_noise) # apply only on review column
 movie_df['review'] = movie_df['review'].apply(remove_sp_char)

@@ -16,7 +16,7 @@ test_text = df.review[limit:]
 test_sentiments = df.sentiment[limit:]
 
 # TfidfVectorizer converts to a matrix
-tv_obj = TfidfVectorizer(max_df = 1, ngram_range = (1,3))
+tv_obj = TfidfVectorizer(max_df = 0.5, ngram_range = (1,3))
 train_text_tv = tv_obj.fit_transform(train_text)
 test_text_tv = tv_obj.transform(test_text)
 

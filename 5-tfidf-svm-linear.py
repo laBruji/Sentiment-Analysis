@@ -1,12 +1,7 @@
 import pandas as pd
-from textblob import TextBlob
-from textblob import Word
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.linear_model import LogisticRegression, SGDClassifier
 from sklearn.svm import LinearSVC
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score, classification_report
 
 df = pd.read_csv('filtered_dataset.csv')
 df_row_count = df.shape[0] 
